@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title fw-bold">{{ $peserta->nama_peserta }}</h5>
+                                    <h5 class="card-title fw-bold">{{ $peserta->nama_peserta }} ({{ $peserta->kategori->nama_kategori }})</h5>
                                     <p class="card-text m-0">Wilayah: {{ $peserta->wilayah->nama_wilayah }}</p>
                                     <p class="card-text m-0">No Telp: {{ $peserta->telepon }}</p>
                                     <p class="card-text m-0">Keterangan: {{ $peserta->keterangan }}</p>

@@ -19,6 +19,19 @@
                             @enderror
                         </div>
                         <div class="mb-3">
+                            <label for="kategori" class="form-label">Kategori:</label>
+                            <div class="row">
+                                @foreach ($kategoris as $kategori)
+                                    <div class="col-3">
+                                        <div class="form-check text-center">
+                                            <input class="form-check-input" type="radio" name="kategori_id" {{ old('kategori_id') == $kategori->id ? "checked='checked'" : '' }} value="{{ $kategori->id }}">
+                                            <label class="form-check-label" for="kategori">{{ $kategori->nama_kategori }}</label>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="mb-3">
                             <label for="wilayah" class="form-label">Wilayah:</label>
                             <select class="form-select" name="wilayah_id">
                                 @foreach ($wilayahs as $wilayah)

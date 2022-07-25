@@ -10,7 +10,7 @@ class Peserta extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    protected $with = ['wilayah', 'author'];
+    protected $with = ['wilayah', 'author', 'kategori'];
 
     public function scopeFilter($query, array $filters)
     {
@@ -18,7 +18,8 @@ class Peserta extends Model
             return $query->where(function($query) use ($search){
                 $query->where('nama_peserta', 'like', '%'. $search. '%')
                     ->orWhere('wilayah_id', 'like', '%' . $search . '%')
-                    ->orWhere('telepon', 'like', '%' . $search . '%');
+                    ->orWhere('telepon', 'like', '%' . $search . '%')
+                    ->orWhere('kategori', 'like', '%' . $search . '%');
             });
         });
     }
@@ -31,6 +32,11 @@ class Peserta extends Model
     public function wilayah()
     {
         return $this->belongsTo(Wilayah::class);
+    }
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
     }
 
     public function getRouteKeyName()

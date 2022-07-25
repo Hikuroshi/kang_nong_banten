@@ -39,7 +39,7 @@
                                         <td>
                                             <img class="img-fluid rounded-3" style="max-width: 100px;" src="{{ asset('storage/' . $peserta->foto) }}" alt="{{ $peserta->nama_peserta }}">
                                         </td>
-                                        <td>{{ $peserta->nama_peserta}}</td>
+                                        <td>{{ $peserta->nama_peserta}} ({{ $peserta->kategori->nama_kategori }})</td>
                                         <td>{{ $peserta->wilayah->nama_wilayah }}</td>
                                         <td>{{ $peserta->telepon }}</td>
                                         <td>{{ $peserta->keterangan }}</td>

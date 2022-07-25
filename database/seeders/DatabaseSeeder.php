@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kategori;
 use App\Models\User;
 use App\Models\Wilayah;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,11 +17,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::factory(2)->create();
+
         User::create([
-            'name' => 'Maulana',
-            'username' => 'lana',
-            'email' => 'maulana@gmail.com',
-            'password' => bcrypt('maulana77')
+            'name' => 'Admin Kang Nong Banten',
+            'username' => 'admin_knb',
+            'email' => 'admin_knb@gmail.com',
+            'password' => bcrypt('knb_b4nten')
         ]);
 
         Wilayah::create([
@@ -61,6 +64,16 @@ class DatabaseSeeder extends Seeder
         Wilayah::create([
             'nama_wilayah' => 'Kabupaten Pandeglang',
             'slug' => 'kabupaten-pandeglang'
+        ]);
+
+        Kategori::create([
+            'nama_kategori' => 'Kang',
+            'slug' => 'kang'
+        ]);
+
+        Kategori::create([
+            'nama_kategori' => 'Nong',
+            'slug' => 'nong'
         ]);
     }
 }

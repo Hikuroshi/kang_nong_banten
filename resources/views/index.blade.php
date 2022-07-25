@@ -19,41 +19,6 @@
         Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. Quos, aliquam.
     </h3>
     
-    {{-- <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <div class="text-center">
-                    <img src="/img/image-ex.jpg" class="img-fluid rounded-circle mb-1 mt-3" style="max-width:100px;" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title text-center fw-bold">Card title</h3>
-                        <p class="card-text text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <div class="text-center">
-                    <img src="/img/image-ex.jpg" class="img-fluid rounded-circle mb-1 mt-3" style="max-width:100px;" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title text-center fw-bold">Card title</h3>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <div class="text-center">
-                    <img src="/img/image-ex.jpg" class="img-fluid rounded-circle mb-1 mt-3" style="max-width:100px;" alt="/img/image-ex.jpg">
-                    <div class="card-body">
-                        <h3 class="card-title text-center fw-bold">Card title</h3>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 </div>
 <main class="py-5">
     <div class="container py-5">

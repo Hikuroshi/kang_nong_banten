@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Peserta;
 use App\Models\Wilayah;
 use Illuminate\Http\Request;
@@ -17,9 +18,15 @@ class DashboardPesertaController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->username == 'admin_knb'){
+            $admin = Peserta::all();
+        } else {
+            $admin = Peserta::where('user_id', auth()->user()->id)->get();
+        }
+
         return view('dashboard.index', [
             'title' => 'Para Peserta Kang Nong Banten',
-            'pesertas' => Peserta::where('user_id', auth()->user()->id)->get()
+            'pesertas' => $admin
         ]);
     }
 
@@ -32,7 +39,8 @@ class DashboardPesertaController extends Controller
     {
         return view('dashboard.create', [
             'title' => 'Tambah Peserta Kang Nong Banten',
-            'wilayahs' => Wilayah::all()
+            'wilayahs' => Wilayah::all(),
+            'kategoris' => Kategori::all()
         ]);
     }
 
@@ -46,6 +54,7 @@ class DashboardPesertaController extends Controller
     {
         $validatedData = $request->validate([
             'nama_peserta' => 'required|max:100',
+            'kategori_id' => 'required',
             'wilayah_id' => 'required',
             'telepon' => 'required|min:10|max:15|unique:pesertas',
             'keterangan' => 'max:255',
@@ -79,10 +88,15 @@ class DashboardPesertaController extends Controller
      */
     public function edit(Peserta $peserta)
     {
+        if (auth()->user()->username !== 'admin_knb' && $peserta->author->id !== auth()->user()->id){
+            abort(403);
+        }
+
         return view('dashboard.edit', [
             'title' => 'Edit Peserta Kang Nong Banten',
             'peserta' => $peserta,
-            'wilayahs' => Wilayah::all()
+            'wilayahs' => Wilayah::all(),
+            'kategoris' => Kategori::all()
         ]);
     }
 
@@ -97,8 +111,9 @@ class DashboardPesertaController extends Controller
     {
         $validatedData = $request->validate([
             'nama_peserta' => 'required|max:100',
-            'telepon' => 'required|max:15',
+            'kategori_id' => 'required',
             'wilayah_id' => 'required',
+            'telepon' => 'required|max:15',
             'keterangan' => 'max:255',
             'foto' => 'image|file|max:1024'
         ]);
