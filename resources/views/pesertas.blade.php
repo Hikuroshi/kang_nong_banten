@@ -35,5 +35,8 @@
             <h4 class="d-flex justify-content-center fw-bold" style="margin: 20vh 0 20vh 0;">Peserta tidak ditemukan</h4>
         @endif
     </div>
+    <div class="d-flex justify-content-end">
+        {{ $pesertas->links() }}
+    </div>
 </div>
 @endsection

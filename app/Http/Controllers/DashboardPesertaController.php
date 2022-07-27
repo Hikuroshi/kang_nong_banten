@@ -52,6 +52,8 @@ class DashboardPesertaController extends Controller
      */
     public function store(Request $request)
     {
+        $slugCount = Peserta::get('slug');
+
         $validatedData = $request->validate([
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
@@ -61,9 +63,10 @@ class DashboardPesertaController extends Controller
             'foto' => 'required|image|file|max:1024'
         ]);
 
+        $validatedData['nama_peserta'] = ucwords($request->nama_peserta);
         $validatedData['foto'] = $request->file('foto')->store('foto-peserta');
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['slug'] = Str::of($request->nama_peserta)->slug('-');
+        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
 
         Peserta::create($validatedData);
         return redirect('/dashboard/pesertas')->with('success', 'Peserta berhasil ditambahkan!');
@@ -109,11 +112,13 @@ class DashboardPesertaController extends Controller
      */
     public function update(Request $request, Peserta $peserta)
     {
+        $slugCount = Peserta::get('slug');
+
         $validatedData = $request->validate([
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
             'wilayah_id' => 'required',
-            'telepon' => 'required|max:15',
+            'telepon' => 'required|min:10|max:15|unique:pesertas',
             'keterangan' => 'max:255',
             'foto' => 'image|file|max:1024'
         ]);
@@ -124,9 +129,10 @@ class DashboardPesertaController extends Controller
             }
             $validatedData['foto'] = $request->file('foto')->store('foto-peserta');
         }
-
+        
+        $validatedData['nama_peserta'] = ucwords($request->nama_peserta);
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['slug'] = Str::of($request->nama_peserta)->slug('-');
+        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
 
         Peserta::where('id', $peserta->id)->update($validatedData);
         return redirect('/dashboard/pesertas')->with('success', 'Peserta berhasil diperbarui!');

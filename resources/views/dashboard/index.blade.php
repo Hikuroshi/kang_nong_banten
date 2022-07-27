@@ -1,6 +1,9 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
+<div class="text-center mb-4">
+    <h4 class="fw-bold">{{ auth()->user()->name }}</h4>
+</div>
 <section class="content">
     <div class="container">
         <div class="row">
@@ -44,12 +47,18 @@
                                         <td>{{ $peserta->telepon }}</td>
                                         <td>{{ $peserta->keterangan }}</td>
                                         <td>
-                                            <a href="/dashboard/pesertas/{{ $peserta->slug }}/edit" class="btn btn-sm btn-primary">Edit</a>
-                                            <form action="/dashboard/pesertas/{{ $peserta->slug }}" method="post" class="d-inline">
-                                                @method('delete')
-                                                @csrf
-                                                <button class="btn btn-sm btn-danger " onclick="return confirm('Apakah yakin ingin menghapus {{ $peserta->nama_peserta }}?')">Hapus</button>
-                                            </form>
+                                            <div class="row g-0">
+                                                <div class="col-6">
+                                                    <a href="/dashboard/pesertas/{{ $peserta->slug }}/edit" class="btn btn-sm btn-primary">Edit</a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <form action="/dashboard/pesertas/{{ $peserta->slug }}" method="post" class="d-inline">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button class="btn btn-sm btn-danger " onclick="return confirm('Apakah yakin ingin menghapus {{ $peserta->nama_peserta }}?')">Hapus</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

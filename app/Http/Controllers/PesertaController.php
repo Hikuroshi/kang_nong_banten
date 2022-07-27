@@ -18,7 +18,7 @@ class PesertaController extends Controller
     {
         return view('pesertas', [
             'title' => 'Semua Peserta Kang Nong Banten',
-            'pesertas' => Peserta::latest()->filter(request(['search']))->paginate(6)->withQueryString()
+            'pesertas' => Peserta::latest()->filter(request(['search', 'wilayah', 'author', 'kategori']))->paginate(10)->withQueryString()
         ]);
     }
 

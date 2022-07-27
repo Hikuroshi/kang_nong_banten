@@ -25,8 +25,8 @@
                                 @foreach ($kategoris as $kategori)
                                     <div class="col-3">
                                         <div class="form-check text-center">
-                                            <input class="form-check-input" type="radio" name="kategori_id" {{ old('kategori_id', $peserta->kategori_id) == $kategori->id ? "checked='checked'" : '' }} value="{{ $kategori->id }}">
-                                            <label class="form-check-label" for="kategori">{{ $kategori->nama_kategori }}</label>
+                                            <input class="form-check-input" type="radio" id="{{ $kategori->nama_kategori }}" name="kategori_id" required {{ old('kategori_id', $peserta->kategori_id) == $kategori->id ? "checked='checked'" : '' }} value="{{ $kategori->id }}">
+                                            <label class="form-check-label" for="{{ $kategori->nama_kategori }}">{{ $kategori->nama_kategori }}</label>
                                         </div>
                                     </div>
                                 @endforeach
@@ -34,7 +34,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="wilayah" class="form-label">Wilayah:</label>
-                            <select class="form-select" name="wilayah_id">
+                            <select id="wilayah" class="form-select" name="wilayah_id" required>
+                                <option></option>
                                 @foreach ($wilayahs as $wilayah)
                                     @if (old('wilayah_id', $peserta->wilayah_id) == $wilayah->id)
                                         <option value="{{ $wilayah->id }}" selected>{{ $wilayah->nama_wilayah }}</option>
