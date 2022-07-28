@@ -11,6 +11,7 @@ class PesertaController extends Controller
     {
         return view('index', [
             'title' => 'Kang Nong Banten',
+            'pesertas' => Peserta::latest()->get()
         ]);
     }
 
