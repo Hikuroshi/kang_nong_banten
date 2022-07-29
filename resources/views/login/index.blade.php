@@ -14,7 +14,7 @@
                 {{ session('loginError') }}
             </div>
             @endif
-            <div class="card shadow">
+            <div class="card shadow mb-5">
                 <div class="card-header text-center pt-3">
                     <h1 class="fw-bold">Login</h1>
                 </div>

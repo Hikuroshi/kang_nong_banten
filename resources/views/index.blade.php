@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -51,93 +51,68 @@
     
     <div class="container py-5">
         <div class="row text-center">
-            <h1 class="my-4 fw-bold">Features</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Id nemo veniam explicabo placeat est nam.</p>
+            <h1 class="my-4 fw-bold">Peserta Kang Nong Banten</h1>
+            <p>“KANG NONG BANTEN PEDULI SEDULUR SEDANTEN” <br> Paguyuban Kang nong Provinsi banten di bawah binaan Dinas Pariwisata provinsi banten.</p>
         </div>
     </div>
     
-    <div class="container py-5">
-        <div class="row g-4 g-lg-5">
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow rounded-3 p-3 p-md-2 p-lg-3 p-xl-5" style="max-height: 400px">
-                    <div class="card-body text-center text-md-start">
-                        <div class="py-3">
-                            <img class="img-fluid" src="{{ asset('storage/' . $pesertas[0]->foto) }}" width="90" alt="{{ $pesertas[0]->nama_peserta }}">
-                        </div>
-                        <div class="py-3">
-                            <h4 class="fw-bold card-title">{{ $pesertas[0]->nama_peserta }}</h4>
-                            <p class="card-text">{{ $pesertas[0]->wilayah->nama_wilayah }}</p>
-                        </div>
+    <div class="container py-5">        
+        <div class="row row-cols-1 row-cols-md-3 g-5 pb-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('storage/' . $pesertas[0]->foto) }}" class="card-img-top" alt="{{ $pesertas[0]->nama_peserta }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $pesertas[0]->nama_peserta }}</h5>
+                        <p class="card-text">{{ $pesertas[0]->wilayah->nama_wilayah }} <br> {{ $pesertas[0]->keterangan }}</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow rounded-3 p-3 p-md-2 p-lg-3 p-xl-5">
-                    <div class="card-body text-center text-md-start">
-                        <div class="py-3">
-                            <img class="img-fluid" src="{{ asset('storage/' . $pesertas[1]->foto) }}" width="90" alt="{{ $pesertas[1]->nama_peserta }}">
-                        </div>
-                        <div class="py-3">
-                            <h4 class="fw-bold card-title">{{ $pesertas[1]->nama_peserta }}</h4>
-                            <p class="card-text">{{ $pesertas[1]->wilayah->nama_wilayah }}</p>
-                        </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('storage/' . $pesertas[1]->foto) }}" class="card-img-top" alt="{{ $pesertas[1]->nama_peserta }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $pesertas[1]->nama_peserta }}</h5>
+                        <p class="card-text">{{ $pesertas[1]->wilayah->nama_wilayah }} <br> {{ $pesertas[1]->keterangan }}</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow rounded-3 p-3 p-md-2 p-lg-3 p-xl-5">
-                    <div class="card-body text-center text-md-start">
-                        <div class="py-3">
-                            <img class="img-fluid" src="{{ asset('storage/' . $pesertas[2]->foto) }}" width="90" alt="{{ $pesertas[2]->nama_peserta }}">
-                        </div>
-                        <div class="py-3">
-                            <h4 class="fw-bold card-title">{{ $pesertas[2]->nama_peserta }}</h4>
-                            <p class="card-text">{{ $pesertas[2]->wilayah->nama_wilayah }}</p>
-                        </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{{ asset('storage/' . $pesertas[2]->foto) }}" class="card-img-top" alt="{{ $pesertas[2]->nama_peserta }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $pesertas[2]->nama_peserta }}</h5>
+                        <p class="card-text">{{ $pesertas[2]->wilayah->nama_wilayah }} <br> {{ $pesertas[2]->keterangan }}</p>
                     </div>
                 </div>
             </div>
+        </div>
         
-        <div class="text-center py-5">
+        <div class="text-center pb-5">
             <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2">Lebih Lengkap</a>
         </div>
-    </div>
-    
-    <div class="container py-3">
-        <div class="row g-4 g-lg-5">
-            <div class="col-md-12 col-lg-6">
-                <div class="card border-0 bg-gold text-white rounded-4 py-5 pe-lg-4 pe-md-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 ps-0 ps-md-5 text-center mt-3">
-                            <img src="ilustrasi.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8 card-body text-center text-md-start">
-                            <h4 class="card-title fw-bold">Lorem, ipsum dolor.</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, perspiciatis.</p>
-                            <a href="#" class="btn btn-light px-4 rounded-pill fw-bold">More</a>
+        
+        <div class="container py-3">
+            <div class="row g-4 g-lg-5">
+                <div class="col-md-12 col-lg-6">
+                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0">
+                        <div class="card-body text-center text-md-start">
+                            <h4 class="card-title fw-bold">Hari Air Dunia XXIX TH 2021</h4>
+                            <p class="card-text">Hari Senin 22 Maret 2021. Nong Verani dan Nong Qorina bertugas dalam acara “Hari Air Dunia XXIX TH 2021” yang berlokasi di Bendungan Sindangheula Kec. Pabuaran, Kab. Serang, Banten.</p>
+                            <a href="https://www.instagram.com/p/COaDl_JlYb_/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-md-12 col-lg-6">
-                <div class="card border-0 bg-gold text-white rounded-4 py-5 pe-lg-4 pe-md-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 ps-0 ps-md-5 text-center mt-3">
-                            <img src="ilustrasi.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8 card-body text-center text-md-start">
-                            <h4 class="card-title fw-bold">Lorem, ipsum dolor.</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, perspiciatis.</p>
-                            <a href="#" class="btn btn-light px-4 rounded-pill fw-bold">More</a>
+                
+                <div class="col-md-12 col-lg-6">
+                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0">
+                        <div class="card-body text-center text-md-start">
+                            <h4 class="card-title fw-bold">Penyematan Duta Anti Narkoba 2020</h4>
+                            <p class="card-text">Kamis, 5 desember 2020. Telah dilaksanakan penyematan Duta Anti Narkoba 2020 kepada Kang Emir, Kang Steven, Nong Qorina, dan Nong Andini oleh Brigadir Jendral Polisi bapak Hendri Marpaung.</p>
+                            <a href="https://www.instagram.com/p/CKnP8FgFdxO/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-@endsection
+    </main>
+    @endsection

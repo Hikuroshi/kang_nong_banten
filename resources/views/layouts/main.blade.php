@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body style="font-family: Nunito, sans-serif">
     <nav class="navbar navbar-expand-lg bg-light border">
@@ -64,29 +65,26 @@
             <div class="row g-3 my-3">
                 <div class="col-lg-6 col-md-12">
                     <div class="pe-lg-5 pe-md-0 text-center text-lg-start">
-                        <h4>Lorem, ipsum.</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum recusandae perferendis fugit inventore quis eaque reprehenderit! Distinctio magnam cumque non.</p>
+                        <h4>Kang Nong Banten</h4>
+                        <p>Kang dan Nong Banten adalah sebutan untuk Duta Wisata, Pemuda Dan Pembangunan Provinsi Banten. Dilaksanakan pertama kali pada tahun 2000</p>
                         
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4>Lorem, ipsum.</h4>
+                    <h4>Media Sosial</h4>
                     <ul class=" list-unstyled">
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
+                        <li><a href="" class="nav-link"><i class="bi bi-instagram"></i> @kangnongbanten</a></li>
+                        <li><a href="" class="nav-link"><i class="bi bi-envelope"></i> paguyubanknb@gmail.com</a></li>
+                        <li><a href="" class="nav-link"><i class="bi bi-globe2"></i> www.kangnongbanten.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 ">
-                    <h4>Lorem, ipsum.</h4>
+                    <h4>Tag</h4>
                     <ul class=" list-unstyled">
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
-                        <li>Lorem.</li>
+                        <li>#excitingbanten</li>
+                        <li>#pageuhngaguyub</li>
+                        <li>#provinsibanten</li>
                     </ul>
-                    
                 </div>
             </div>
         </div>
