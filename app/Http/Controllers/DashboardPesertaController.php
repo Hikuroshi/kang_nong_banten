@@ -50,10 +50,8 @@ class DashboardPesertaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Peserta $peserta)
     {
-        $slugCount = Peserta::get('slug');
-
         $validatedData = $request->validate([
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
@@ -66,6 +64,8 @@ class DashboardPesertaController extends Controller
         $validatedData['nama_peserta'] = ucwords($request->nama_peserta);
         $validatedData['foto'] = $request->file('foto')->store('foto-peserta');
         $validatedData['user_id'] = auth()->user()->id;
+
+        $slugCount = Peserta::get('slug')->where($request->slug, $peserta->slug);
         $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
 
         Peserta::create($validatedData);
@@ -112,17 +112,20 @@ class DashboardPesertaController extends Controller
      */
     public function update(Request $request, Peserta $peserta)
     {
-        $slugCount = Peserta::get('slug');
-
-        $validatedData = $request->validate([
+        $rules = [
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
             'wilayah_id' => 'required',
-            'telepon' => 'required|min:10|max:15|unique:pesertas',
             'keterangan' => 'max:255',
             'foto' => 'image|file|max:1024'
-        ]);
+        ];
+        
+        if($request->telepon != $peserta->telepon){
+            $rules['telepon'] = 'required|min:10|max:15|unique:pesertas';
+        }
 
+        $validatedData = $request->validate($rules);
+        
         if($request->file('foto')){
             if($request->oldImage){
                 Storage::delete($request->oldImage);
@@ -132,6 +135,8 @@ class DashboardPesertaController extends Controller
         
         $validatedData['nama_peserta'] = ucwords($request->nama_peserta);
         $validatedData['user_id'] = auth()->user()->id;
+
+        $slugCount = Peserta::get('slug')->where($request->slug, $peserta->slug);
         $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
 
         Peserta::where('id', $peserta->id)->update($validatedData);
