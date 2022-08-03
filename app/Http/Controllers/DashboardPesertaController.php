@@ -58,7 +58,7 @@ class DashboardPesertaController extends Controller
             'wilayah_id' => 'required',
             'telepon' => 'required|min:10|max:15|unique:pesertas',
             'keterangan' => 'max:255',
-            'foto' => 'required|image|file|max:1024'
+            'foto' => 'required|image|file|max:512'
         ]);
 
         $validatedData['nama_peserta'] = ucwords($request->nama_peserta);

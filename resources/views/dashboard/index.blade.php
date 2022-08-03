@@ -47,17 +47,13 @@
                                         <td>{{ $peserta->telepon }}</td>
                                         <td>{{ $peserta->keterangan }}</td>
                                         <td>
-                                            <div class="row g-0">
-                                                <div class="col-6">
-                                                    <a href="/dashboard/pesertas/{{ $peserta->slug }}/edit" class="btn btn-sm btn-primary">Edit</a>
-                                                </div>
-                                                <div class="col-6">
-                                                    <form action="/dashboard/pesertas/{{ $peserta->slug }}" method="post" class="d-inline">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <button class="btn btn-sm btn-danger " onclick="return confirm('Apakah yakin ingin menghapus {{ $peserta->nama_peserta }}?')">Hapus</button>
-                                                    </form>
-                                                </div>
+                                            <div class="text-center" style="white-space: nowrap;">
+                                                <a href="/dashboard/pesertas/{{ $peserta->slug }}/edit" class="btn btn-sm btn-primary">Edit</a>
+                                                <form action="/dashboard/pesertas/{{ $peserta->slug }}" method="post" class="d-inline">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button class="btn btn-sm btn-danger " onclick="return confirm('Apakah yakin ingin menghapus {{ $peserta->nama_peserta }}?')">Hapus</button>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>
