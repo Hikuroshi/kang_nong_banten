@@ -50,7 +50,7 @@
     </div>
     
     <div class="container py-5">
-        <div class="row text-center">
+        <div class="text-center">
             <h1 class="my-4 fw-bold">Peserta Kang Nong Banten</h1>
             <p>“KANG NONG BANTEN PEDULI SEDULUR SEDANTEN” <br> Paguyuban Kang nong Provinsi banten di bawah binaan Dinas Pariwisata provinsi banten.</p>
         </div>
@@ -91,7 +91,7 @@
             <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2">Lebih Lengkap</a>
         </div>
         
-        <div class="container py-3">
+        <div class="container pb-5">
             <div class="row g-4 g-lg-5">
                 <div class="col-md-12 col-lg-6">
                     <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0">
@@ -112,6 +112,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="container pb-3" style="margin-top: 15%">
+            <div class="text-center">
+                <h1 class="my-4 fw-bold">Pemilihan Kang Nong Banten 2020</h1>
+            </div>
+        </div>
+        
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/y-OGeucOl2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="container py-5">
+            <div class="text-center">
+                <p class="text-muted">Sebenarnya tradisi kita menghadirkan seluruh finalis di Grand Final, karena semua memiliki kans yang sama. Namun karena kondisi Pandemi, maka kami hadirkan setengah/ 50% dari jumlah finalis yang 24 pasang. Karena agar pilihan dewan juri lebih banyak. Jika sempat muncul 10 pasang,  itu semata kami terbawa eforia Top Ten. Jadi kami memberikan kesempatan lebih banyak kepada para peserta untuk memperlihatkan potensinya.</p>
             </div>
         </div>
     </main>

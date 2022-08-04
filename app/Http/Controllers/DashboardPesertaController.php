@@ -65,8 +65,9 @@ class DashboardPesertaController extends Controller
         $validatedData['foto'] = $request->file('foto')->store('foto-peserta');
         $validatedData['user_id'] = auth()->user()->id;
 
-        $slugCount = Peserta::get('slug')->where($request->slug, $peserta->slug);
-        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
+        $slug = Peserta::where('nama_peserta', $request->nama_peserta)->get();
+        $slugCount = count($slug) . "-" . Str::random(40);
+        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . $slugCount)->slug('-');
 
         Peserta::create($validatedData);
         return redirect('/dashboard/pesertas')->with('success', 'Peserta berhasil ditambahkan!');
@@ -123,7 +124,7 @@ class DashboardPesertaController extends Controller
         if($request->telepon != $peserta->telepon){
             $rules['telepon'] = 'required|min:10|max:15|unique:pesertas';
         }
-
+        
         $validatedData = $request->validate($rules);
         
         if($request->file('foto')){
@@ -135,9 +136,15 @@ class DashboardPesertaController extends Controller
         
         $validatedData['nama_peserta'] = ucwords($request->nama_peserta);
         $validatedData['user_id'] = auth()->user()->id;
-
-        $slugCount = Peserta::get('slug')->where($request->slug, $peserta->slug);
-        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . count($slugCount))->slug('-');
+        
+        $slug = Peserta::where('nama_peserta', $request->nama_peserta)->get();
+        $slugCount = count($slug) . "-" . Str::random(40);
+        
+        if($request->nama_peserta == $peserta->nama_peserta){
+            $validatedData['slug'] = $peserta->slug;
+        } else {
+            $validatedData['slug'] = Str::of($request->nama_peserta . "-" . $slugCount)->slug('-');
+        }
 
         Peserta::where('id', $peserta->id)->update($validatedData);
         return redirect('/dashboard/pesertas')->with('success', 'Peserta berhasil diperbarui!');

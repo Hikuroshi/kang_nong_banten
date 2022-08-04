@@ -22,7 +22,7 @@
 <body style="font-family: Nunito, sans-serif">
     <nav class="navbar navbar-expand-lg bg-light mb-4 border">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="/">
                 <img src="/img/kangnongbanten.png" alt="" width="80" class="d-inline-block align-text-top img-fluid me-3">
                 Kang Nong Banten
             </a>
