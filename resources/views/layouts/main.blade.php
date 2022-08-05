@@ -64,7 +64,7 @@
             <hr>
             <div class="row g-3 my-3">
                 <div class="col-lg-6 col-md-12">
-                    <div class="pe-lg-5 pe-md-0 text-center text-lg-start">
+                    <div class="pe-lg-5 pe-md-0 text-start">
                         <h4>Kang Nong Banten</h4>
                         <p>Kang dan Nong Banten adalah sebutan untuk Duta Wisata, Pemuda Dan Pembangunan Provinsi Banten. Dilaksanakan pertama kali pada tahun 2000</p>
                         

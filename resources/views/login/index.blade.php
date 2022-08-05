@@ -2,13 +2,8 @@
 
 @section('container')
 <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-5">
-            {{-- @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }}
-            </div>
-            @endif --}}
+    <div class="row justify-content-center my-5">
+        <div class="col-md-7 col-lg-5">
             @if (session()->has('loginError'))
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 {{ session('loginError') }}

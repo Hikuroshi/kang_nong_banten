@@ -2,8 +2,8 @@
 
 @section('container')
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 m-auto">
+        <div class="row my-5">
+            <div class="col-md-8 m-auto">
                 <div class="card p-3">
                     <h3 class="text-center fw-bold">Edit Peserta {{ $peserta->nama_peserta }}</h3>
                     <form action="/dashboard/pesertas/{{ $peserta->slug }}" method="post" enctype="multipart/form-data">

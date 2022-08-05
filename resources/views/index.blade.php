@@ -2,16 +2,14 @@
 
 @section('container')    
 <div class="container mt-4">
-    <div class="row mb-10">
-        <div class="col-md-6 ps-5 d-flex align-items-center">
-            <div class="ms-5">
-                <h1 class="fw-bold">Kang Nong Banten</h1>
-                <p class="text-black-50">Paguyuban Kang & Nong Provinsi Banten. <br>DUTA PEMBANGUNAN PROVINSI BANTEN </p>
-                <a href="/pesertas" class="btn btn-primary px-5 py-2">Lihat Peserta</a>
-            </div>
-        </div>
-        <div class="col-md-5 text-end">
+    <div class="row mb-10 align-items-center justify-content-evenly">
+        <div class="col-md-5 p-md-5 mb-5 order-sm-1">
             <img src="/img/kangnongbanten.jpg" alt="" class="img-fluid rounded-4">
+        </div>
+        <div class="col-md-5 text-center text-sm-start">
+            <h1 class="fw-bold">Kang Nong Banten</h1>
+            <p class="text-black-50">Paguyuban Kang & Nong Provinsi Banten. <br>DUTA PEMBANGUNAN PROVINSI BANTEN </p>
+            <a href="/pesertas" class="btn btn-primary px-5 py-2">Lihat Peserta</a>
         </div>
     </div>
     
@@ -26,8 +24,8 @@
             <div class="row g-0">
                 <div class="col-12">
                     <div class="card border-0 bg-gold rounded-5">
-                        <div class="row m-5 align-items-center">
-                            <div class="col-md-5 col-lg-4">
+                        <div class="row m-md-5 align-items-center">
+                            <div class="col-md-5 col-lg-4 mt-3">
                                 <img class="img-fluid" src="/img/sumpahpemuda.jpg" alt="">
                             </div>
                             <div class="col-md-7 col-lg-8 py-5 py-md-0 text-white">
