@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreignIdFor(Kategori::class);
             $table->string('nama_peserta', 100);
             $table->string('slug')->unique();
+            $table->string('angkatan');
             $table->string('telepon')->unique();
             $table->string('keterangan')->nullable();
             $table->string('foto');

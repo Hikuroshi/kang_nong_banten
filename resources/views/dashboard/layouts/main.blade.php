@@ -39,7 +39,7 @@
                         <a class="nav-link" href="/pesertas">Peserta</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link" href="/dashboard/pesertas">Dashboard</a>

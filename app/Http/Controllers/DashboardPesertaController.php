@@ -56,6 +56,7 @@ class DashboardPesertaController extends Controller
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
             'wilayah_id' => 'required',
+            'angkatan' => 'required|min:2000|max:2100',
             'telepon' => 'required|min:10|max:15|unique:pesertas',
             'keterangan' => 'max:255',
             'foto' => 'required|image|file|max:512'
@@ -117,6 +118,7 @@ class DashboardPesertaController extends Controller
             'nama_peserta' => 'required|max:100',
             'kategori_id' => 'required',
             'wilayah_id' => 'required',
+            'angkatan' => 'required',
             'keterangan' => 'max:255',
             'foto' => 'image|file|max:1024'
         ];

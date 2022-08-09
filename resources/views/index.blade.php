@@ -60,7 +60,7 @@
                 <div class="card h-100">
                     <img src="{{ asset('storage/' . $pesertas[0]->foto) }}" class="card-img-top" alt="{{ $pesertas[0]->nama_peserta }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $pesertas[0]->nama_peserta }}</h5>
+                        <h5 class="card-title fw-bold">({{ $pesertas[0]->kategori->nama_kategori }}) {{ $pesertas[0]->nama_peserta }}</h5>
                         <p class="card-text">{{ $pesertas[0]->wilayah->nama_wilayah }} <br> {{ $pesertas[0]->keterangan }}</p>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="card h-100">
                     <img src="{{ asset('storage/' . $pesertas[1]->foto) }}" class="card-img-top" alt="{{ $pesertas[1]->nama_peserta }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $pesertas[1]->nama_peserta }}</h5>
+                        <h5 class="card-title fw-bold">({{ $pesertas[1]->kategori->nama_kategori }}) {{ $pesertas[1]->nama_peserta }}</h5>
                         <p class="card-text">{{ $pesertas[1]->wilayah->nama_wilayah }} <br> {{ $pesertas[1]->keterangan }}</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <div class="card h-100">
                     <img src="{{ asset('storage/' . $pesertas[2]->foto) }}" class="card-img-top" alt="{{ $pesertas[2]->nama_peserta }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $pesertas[2]->nama_peserta }}</h5>
+                        <h5 class="card-title fw-bold">({{ $pesertas[2]->kategori->nama_kategori }}) {{ $pesertas[2]->nama_peserta }}</h5>
                         <p class="card-text">{{ $pesertas[2]->wilayah->nama_wilayah }} <br> {{ $pesertas[2]->keterangan }}</p>
                     </div>
                 </div>

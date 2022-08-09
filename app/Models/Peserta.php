@@ -17,7 +17,8 @@ class Peserta extends Model
         $query->when($filters['search'] ?? false, function($query, $search){
             return $query->where(function($query) use ($search){
                 $query->where('nama_peserta', 'like', '%'. $search. '%')
-                    ->orWhere('telepon', 'like', '%' . $search . '%');
+                    ->orWhere('telepon', 'like', '%' . $search . '%')
+                    ->orWhere('angkatan', 'like', '%' . $search . '%');
             });
         });
     }

@@ -46,6 +46,15 @@
                             </select>
                         </div>
                         <div class="mb-3">
+                            <label for="angkatan" class="form-label">Tahun Angkatan:</label>
+                            <input min="2000" max="2100" type="number" class="form-control @error('angkatan') is-invalid @enderror" id="angkatan" name="angkatan" required value="{{ old('angkatan', $peserta->angkatan) }}">
+                            @error('angkatan')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
                             <label for="telepon" class="form-label">Telepon:</label>
                             <input type="number" class="form-control @error('telepon') is-invalid @enderror" id="telepon" name="telepon" required value="{{ old('telepon', $peserta->telepon) }}">
                             @error('telepon')

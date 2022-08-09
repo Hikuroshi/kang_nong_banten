@@ -26,7 +26,6 @@ Route::resource('/dashboard/pesertas', DashboardPesertaController::class)->middl
 Route::controller(PesertaController::class)->group(function(){
     Route::get('/', 'home');
     Route::get('/pesertas', 'index');
-    Route::get('/pesertas/{peserta:slug}', 'show');
     Route::get('/about', 'about');
 });
 
