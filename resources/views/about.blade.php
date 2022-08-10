@@ -19,7 +19,7 @@
     <div class="container">
         <div class="card p-3 mt-5">
             <div class="card-body">
-                <h2 class="card-title fw-bold">Para Pemenang Kang Nong Banten</h2>
+                <h2 class="card-title fw-bold">Tentang Kang Nong Banten</h2>
                 <div class="card-text">
                     Kang dan Nong Banten adalah sebutan untuk Duta Wisata, Pemuda Dan Pembangunan Provinsi Banten. Dilaksanakan pertama kali pada tahun 2000 dan diikuti oleh 3 kabupaten yakni Cilegon, Serang dan Pandeglang. Baru pada tahun 2001 Tangerang dan Lebak ikut serta. 
                 </div>
@@ -31,26 +31,128 @@
 <div class="container mb-5">
     <div class="mb-5">
         <h4 class="fw-bold mb-3" style="margin-top: 8rem">Sejarah Kang Nong Banten</h4>
-        <p>Kabupaten Tangerang tercatat sebagai kabupaten tersukses sepanjang penyelenggaraan Kang dan Nong Banten. Tercatat 10 gelar Juara Utama direngkuh Kang Nong Kabupaten Tangerang, bahkan untuk gelar Kang disabet oleh kabupaten tangerang berturut-turut tanpa putus. Prestasi terbaik kabupaten Tangerang diukir pada tahun 2008 dimana Kabupaten Tangerang menyabet 7 dari 12 gelar yang diperebutkan. Dengan tambahan 7 gelar tersebut Kabupaten Tangerang secara total telah merebut 30 gelar juara sejak keikutsertaan pertama mereka pada 2001.</p>
+        <p>
+            Pemilihan Kang Nong Banten pertama kali diselenggarakan oleh Dinas Pariwisata pada tahun 2008 sebagai proses akhir dari pemilihan duta pariwisata yang dilaksanakan oleh Pemerintah Kabupaten/Kota. Pemilihan Kang Nong Banten diselenggarakan sebagai sebuah gagasan akan konsistensi dan dukungan pemerintah yang senantiasa memberi ruang bagi segala bentuk kreatifitas dan aktualisasi diri generasi muda yang inovatif.
+        </p>
+        <p>
+            Tahapan <b> Aku Menjadi </b> sebagai proses pengenalan peserta kepada kehidupan masyarakat di pedesaan. Peserta tinggal di rumah penduduk dan melakukan aktifitas keseharian bersama pemilik rumah yang berada di sekitar destinasi wisata sekaligus sebagai ajang sosialisasi Sadar Wisata.
+        </p>
+    </div>
+    <div class="row mb-5">
+        <h4 class="fw-bold mb-3">Pemilihan Kang Nong Banten</h4>
+        <div class="col-md-6">
+            <h6 class="card-title fw-bold mb-3">Proses pemilihan Kang Nong Banten dilakukan beberapa tahap yaitu:</h6>
+            <ol type="a">
+                <li>Uji materi, Psikotes</li> 
+                <li>Unjuk Bakat</li> 
+                <li>Pengenalan Profil</li> 
+                <li>Karantina Aku Menjadi</li> 
+                <li>Pengayaan materi tentang public speaking dan motivasi</li> 
+                <li>Grand Final</li> 
+            </ol>
+        </div>
+        <div class="col-md-6">
+            <h6 class="card-title fw-bold mb-3">Kegiatan pemilihan Kang Nong Banten ini bertujuan untuk:</h6>
+            <ol type="a">
+                <li>Mencetak generasi muda Provinsi Banten yang berlandaskan iman dan taqwa (IMTAQ)</li> 
+                <li>Menguasai ilmu pengetahuan dan teknologi (IPTEK)</li> 
+                <li>Memiliki daya saing, berdedikasi, berintegritas, berkarakter</li> 
+                <li>Mencintai dan menguasai kebudayaan, pariwisata, dan capaian pembangunan Provinsi Banten</li> 
+            </ol>
+        </div>
+        <p class="mt-5">
+            Sejak awal dimulainya tahun 2008 hingga tahun 2018, proses pemilihan dilaksanakan setiap tahun maka tahap selanjutnya akan dilaksanakan 2 tahun sekali dengan tujuan untuk memberikan kesempatan kepada Kang Nong Banten mengaktualisasikan diri dalam berbagai kegiatan pembangunan (tahapan <b> Aku Mengabdi </b>).
+        </p>
+        <p>
+            Beberapa Organisasi Perangkat Daerah (OPD) dan lembaga juga turut mendukung kegiatan ini dengan memilih duta duta untuk mempromosikan dan mensosialisasikan programnya antara lain Duta Pajak Daerah (Badan Pendapatan Daerah), Duta Lingkungan Hidup dan Duta Hutan Lestari (Dinas Lingkungan Hidup dan Kehutanan), Duta Rupiah (Perwakilan Bank Indonesia Provinsi Banten), Duta Anti Narkotika (Badan Narkotika Nasional Provinsi Banten), dan Duta Otomotif (Ikatan Motor Indonesia) Banten.
+        </p>
     </div>
     <div class="row">
-        <h4 class="card-title fw-bold mb-3">Sejarah Banten</h4>
-        <div class="col-md-6 text-muted">
+        <h4 class="card-title fw-bold mb-3">Pemenang Kang Nong Banten</h4>
+        <div class="col-md-6">
             <ul>
-                <li>2000 : Gerry & Maya Soviasari (Asal Kab. Serang)</li> 
-                <li>2001 : Ade Komarudin (Kab. Tangerang) & Mega Putri Aulia(Kab.Serang)</li> 
-                <li>2002 : Hendri Siswanto(Kab. Tangerang)& Henny Murniaty (Kota Cilegon)</li> 
-                <li>2003 : Tb. Didi Hamidi(Kab. Tangerang)& Riandini (Kota Tangerang)</li> 
-                <li>2004 : tidak diselenggarakan, bersamaan dengan Pemilu 2004</li> 
-                <li>2005 : Abdul Rosyid (Kab.Tangerang)& Riska Inki Fitria (Kab.Tangerang)</li> 
-                <li>2006 : Brata Manggala (Kab. Tangerang) & Ressa Puspita Rosaliana(Kab.Serang)</li> 
-                <li>2007 : Rocky Pandu K (Kab. Tangerang) & Yona Wahyuni Kemala (Kab. Tangerang)</li> 
-                <li>2008 : Yulianto Wibisono(Kab. Tangerang) & Novi Nurul Fatimah(Kab. Tangerang)</li> 
+                <li>
+                    2000 :
+                    <ul>
+                        <li>Kang Banten: Gerry (Kabupaten Serang)</li>
+                        <li>Nong Banten: Maya Soviasari (Kabupaten Serang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2001 :
+                    <ul>
+                        <li>Kang Banten: Ade Komarudin (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Mega Putri Aulia (Kabupaten Serang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2002 :
+                    <ul>
+                        <li>Kang Banten: Hendri Siswanto (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Henny Murniaty (Kota Cilegon)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2003 :
+                    <ul>
+                        <li>Kang Banten: Tb. Didi Hamidi (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Riandini (Kota Tangerang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2005 :
+                    <ul>
+                        <li>Kang Banten: Abdul Rosyid (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Riska Inki Fitria (Kab.Tangerang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2006 :
+                    <ul>
+                        <li>Kang Banten: Brata Manggala (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Ressa Puspita Rosaliana (Kabupaten Serang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2007 :
+                    <ul>
+                        <li>Kang Banten: Rocky Pandu K (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Yona Wahyuni Kemala (Kabupaten Tangerang)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2008 :
+                    <ul>
+                        <li>Kang Banten: Yulianto Wibisono (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: Novi Nurul Fatimah (Kabupaten Tangerang)</li>
+                    </ul>
+                </li> 
             </ul>
         </div>
-        <div class="col-md-6 text-muted">
-            <p>Diawali dengan penguasaan Kota Pelabuhan Banten, yang dilanjutkan dengan merebut Banten Girang dari Pucuk Umun pada tahun 1527, Maulana Hasanuddin, mendirikan Kesultanan Banten di wilayah bekas Banten Girang. Dan pada tahun 1579, Maulana Yusuf, penerus Maulana Hasanuddin, menghancurkan Pakuan Pajajaran, ibukota atau pakuan (berasal dar kata pakuwuan) Kerajaan Sunda. Dengan demikian pemerintahan di Jawa Barat dilanjutkan oleh Kesultanan Banten. Hal itu ditandai dengan diboyongnya Palangka Sriman Sriwacana, tempat duduk kala seorang raja dinobatkan, dari Pakuan Pajajaran ke Surasowan di Banten oleh pasukan Maulana Yusuf. Batu berukuran 200 x 160 x 20 cm itu terpaksa diboyong ke Banten karena tradisi politik waktu itu "mengharuskan" demikian. Pertama, dengan dirampasnya Palangka tersebut, di Pakuan tidak mungkin lagi dinobatkan raja baru. Kedua, dengan memiliki Palangka itu, Maulana Yusuf merupakan penerus kekuasaan Kerajaan Sunda yang "sah" karena buyut perempuannya adalah puteri Sri Baduga Maharaja.
-            </p>
+        <div class="col-md-6">
+            <ul>
+                <li>
+                    2017 :
+                    <ul>
+                        <li>Kang Banten: Arifatah (Kabupaten Tangerang)</li>
+                        <li>Nong Banten: As Sakinah (Kota Cilegon)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2018 :
+                    <ul>
+                        <li>Kang Banten: Mohammad Faiz Aulia (Kabupaten Lebak)</li>
+                        <li>Nong Banten: Metha Aurum Z.A (Kota Cilegon)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2019 :
+                    <ul>
+                        <li>Juara 1: Nico Putra Pratama & Metha Aurum Z.A (Kota Cilegon)</li>
+                        <li>Juara 2: </li>
+                    </ul>
+                </li> 
+            </ul>
         </div>
     </div>
 </div>
