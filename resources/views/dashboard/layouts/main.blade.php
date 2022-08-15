@@ -47,7 +47,7 @@
                     <li class="nav-item px-2">
                         <form action="/logout" method="post">
                             @csrf
-                            <button class="btn btn-outline-danger rounded-pill px-3">Logout</button>
+                            <button class="btn btn-outline-danger rounded-pill px-3 shadow-sm">Logout</button>
                         </form>
                     </li>
                 </ul>

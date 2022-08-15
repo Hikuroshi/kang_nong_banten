@@ -5,7 +5,7 @@
     <div class="mt-0" style="background-color: darkgoldenrod; height: 25vh;"></div>
     
     <div class="container position-relative">
-        <div class="card p-3 position-absolute" style="top: 30%; transform: translateY(-50%);">
+        <div class="card p-3 position-absolute shadow" style="top: 30%; transform: translateY(-50%);">
             <div class="card-body">
                 <h2 class="card-title fw-bold">Tentang Kang Nong Banten</h2>
                 <div class="card-text pb-5 pb-md-0">

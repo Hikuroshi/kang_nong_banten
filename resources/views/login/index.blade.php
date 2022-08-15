@@ -26,7 +26,7 @@
                             <label for="floatingPassword">Password</label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary px-4">Login</button>
+                        <button type="submit" class="btn btn-primary px-4 shadow-sm">Login</button>
                     </form>
                 </div>
             </div>

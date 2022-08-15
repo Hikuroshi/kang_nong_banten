@@ -47,7 +47,7 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a href="/dashboard/pesertas" class="btn btn-danger">Kembali</a>
+                        <a href="/dashboard/pesertas" class="btn btn-danger shadow-sm">Kembali</a>
                     </form>
                 </div>
             </div>

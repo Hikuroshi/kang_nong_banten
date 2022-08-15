@@ -9,7 +9,7 @@
         <div class="col-md-5 text-center text-sm-start">
             <h1 class="fw-bold">Kang Nong Banten</h1>
             <p class="text-black-50">Paguyuban Kang & Nong Provinsi Banten. <br>DUTA PEMBANGUNAN PROVINSI BANTEN </p>
-            <a href="/pesertas" class="btn btn-primary px-5 py-2">Lihat Peserta</a>
+            <a href="/pesertas" class="btn btn-primary px-5 py-2 shadow-sm">Lihat Peserta</a>
         </div>
     </div>
     
@@ -26,7 +26,7 @@
                     <div class="card border-0 bg-gold rounded-5">
                         <div class="row m-md-5 align-items-center">
                             <div class="col-md-5 col-lg-4 mt-3">
-                                <img class="img-fluid" src="/img/sumpahpemuda.jpg" alt="">
+                                <img class="img-fluid shadow-lg" src="/img/sumpahpemuda.jpg" alt="">
                             </div>
                             <div class="col-md-7 col-lg-8 py-5 py-md-0 text-white">
                                 <h2 class="fw-bold mb-3">"Kemajuan suatu bangsa ada di genggaman para pemuda, Selamat Hari Sumpah Pemuda."</h2>
@@ -57,7 +57,7 @@
     <div class="container py-5">        
         <div class="row row-cols-1 row-cols-md-3 g-5 pb-4">
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow h-100">
                     <img src="{{ asset('storage/' . $pesertas[0]->foto) }}" class="card-img-top" alt="{{ $pesertas[0]->nama_peserta }}">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">({{ $pesertas[0]->kategori->nama_kategori }}) {{ $pesertas[0]->nama_peserta }}</h5>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow h-100">
                     <img src="{{ asset('storage/' . $pesertas[1]->foto) }}" class="card-img-top" alt="{{ $pesertas[1]->nama_peserta }}">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">({{ $pesertas[1]->kategori->nama_kategori }}) {{ $pesertas[1]->nama_peserta }}</h5>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card shadow h-100">
                     <img src="{{ asset('storage/' . $pesertas[2]->foto) }}" class="card-img-top" alt="{{ $pesertas[2]->nama_peserta }}">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">({{ $pesertas[2]->kategori->nama_kategori }}) {{ $pesertas[2]->nama_peserta }}</h5>
@@ -86,27 +86,27 @@
         </div>
         
         <div class="text-center pb-5">
-            <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2">Lebih Lengkap</a>
+            <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2 shadow-sm">Lebih Lengkap</a>
         </div>
         
         <div class="container pb-5">
             <div class="row g-4 g-lg-5">
                 <div class="col-md-12 col-lg-6">
-                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0">
+                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
                         <div class="card-body text-center text-md-start">
                             <h4 class="card-title fw-bold">Hari Air Dunia XXIX TH 2021</h4>
                             <p class="card-text">Hari Senin 22 Maret 2021. Nong Verani dan Nong Qorina bertugas dalam acara “Hari Air Dunia XXIX TH 2021” yang berlokasi di Bendungan Sindangheula Kec. Pabuaran, Kab. Serang, Banten.</p>
-                            <a href="https://www.instagram.com/p/COaDl_JlYb_/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold">Selengkapnya</a>
+                            <a href="https://www.instagram.com/p/COaDl_JlYb_/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-12 col-lg-6">
-                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0">
+                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
                         <div class="card-body text-center text-md-start">
                             <h4 class="card-title fw-bold">Penyematan Duta Anti Narkoba 2020</h4>
                             <p class="card-text">Kamis, 5 desember 2020. Telah dilaksanakan penyematan Duta Anti Narkoba 2020 kepada Kang Emir, Kang Steven, Nong Qorina, dan Nong Andini oleh Brigadir Jendral Polisi bapak Hendri Marpaung.</p>
-                            <a href="https://www.instagram.com/p/CKnP8FgFdxO/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold">Selengkapnya</a>
+                            <a href="https://www.instagram.com/p/CKnP8FgFdxO/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

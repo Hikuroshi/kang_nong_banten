@@ -83,8 +83,8 @@
                             @enderror
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a class="btn btn-danger" href="/dashboard/pesertas">Batal</a>
+                        <button type="submit" class="btn btn-primary shadow-sm">Simpan</button>
+                        <a class="btn btn-danger shadow-sm" href="/dashboard/pesertas">Batal</a>
                     </form>
                 </div>
             </div>

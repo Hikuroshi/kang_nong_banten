@@ -41,7 +41,7 @@
 
                     @guest
                     <li class="nav-item px-2">
-                        <a class="btn btn-outline-primary rounded-pill px-3" href="/login">Login</a>
+                        <a class="btn btn-outline-primary rounded-pill px-3 shadow-sm" href="/login">Login</a>
                     </li>
                     @endguest
                 </ul>
