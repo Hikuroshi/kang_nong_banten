@@ -148,8 +148,22 @@
                 <li>
                     2019 :
                     <ul>
-                        <li>Juara 1: Nico Putra Pratama & Metha Aurum Z.A (Kota Cilegon)</li>
-                        <li>Juara 2: </li>
+                        <li>Kang Banten: Nico Putra Pratama (Kota Cilegon)</li>
+                        <li>Nong Banten: Metha Aurum Z.A (Kota Cilegon)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2020 :
+                    <ul>
+                        <li>Kang Banten: Angga Diaz Ramadhan (Kota Serang)</li>
+                        <li>Nong Banten: Latifa Suci Nurbiah (Kota Tangerang Selatan)</li>
+                    </ul>
+                </li> 
+                <li>
+                    2021 :
+                    <ul>
+                        <li>Kang Banten: Kevin Kesumawinata (Kota Serang)</li>
+                        <li>Nong Banten: Verani Nindya (Kota Serang)</li>
                     </ul>
                 </li> 
             </ul>
