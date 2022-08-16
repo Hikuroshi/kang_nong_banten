@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-none d-sm-block">
-    <div class="mt-0" style="background-color: darkgoldenrod; height: 25vh;"></div>
+    <div class="mt-0 bg-gold" style="height: 25vh;"></div>
     
     <div class="container position-relative">
         <div class="card p-3 position-absolute shadow" style="top: 30%; transform: translateY(-50%);">

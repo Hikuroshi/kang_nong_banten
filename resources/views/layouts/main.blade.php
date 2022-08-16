@@ -51,9 +51,9 @@
 
     @yield('container')
 
-    <footer class="bg-light border-top">
+    <footer class="bg-gold text-white border-top">
         <div class="container pt-4">
-            <div class="text-center">
+            {{-- <div class="text-center">
                 <a class="text-dark bi bi-facebook fs-5 mx-3" href="#"></a>
                 <a class="text-dark bi bi-twitter fs-5 mx-3" href="#"></a>
                 <a class="text-dark bi bi-instagram fs-5 mx-3" href="#"></a>
@@ -61,7 +61,7 @@
                 <a class="text-dark bi bi-whatsapp fs-5 mx-3" href="#"></a>
                 <a class="text-dark bi bi-discord fs-5 mx-3" href="#"></a>
             </div>
-            <hr>
+            <hr> --}}
             <div class="row g-3 my-3">
                 <div class="col-lg-6 col-md-12">
                     <div class="pe-lg-5 pe-md-0 text-start">
@@ -89,10 +89,10 @@
             </div>
         </div>
         
-        <div class="border-top">
+        <div class="bg-gold-2">
             <div class="container text-center p-3">
                 © 2022 Copyright:
-                <a class="text-dark text-decoration-none" href="#">Kang Nong Banten</a>
+                <a class="text-white text-decoration-none" href="#">Kang Nong Banten</a>
             </div>    
         </div>
     </footer>
