@@ -24,13 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto fw-bold">
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">Beranda</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link" href="/pesertas">Peserta</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/posts">Dokumentasi</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="/about">Tentang</a>
                     </li>
                     
                     @auth
@@ -51,7 +54,7 @@
 
     @yield('container')
 
-    <footer class="bg-gold text-white border-top">
+    <footer class="bg-gold text-white border-top mt-5">
         <div class="container pt-4">
             {{-- <div class="text-center">
                 <a class="text-dark bi bi-facebook fs-5 mx-3" href="#"></a>
@@ -73,9 +76,10 @@
                 <div class="col-lg-3 col-md-6">
                     <h4>Media Sosial</h4>
                     <ul class=" list-unstyled">
-                        <li><a href="" class="nav-link"><i class="bi bi-instagram"></i> @kangnongbanten</a></li>
-                        <li><a href="" class="nav-link"><i class="bi bi-envelope"></i> paguyubanknb@gmail.com</a></li>
-                        <li><a href="" class="nav-link"><i class="bi bi-globe2"></i> www.kangnongbanten.com</a></li>
+                        <li><a href="https://www.instagram.com/kangnongbanten" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="bi bi-instagram"></i> @kangnongbanten</a></li>
+                        <li><a href="mailto: paguyubanknb@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="bi bi-envelope"></i> paguyubanknb@gmail.com</a></li>
+                        <li><a href="www.kangnongbanten.com" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="bi bi-globe2"></i> www.kangnongbanten.com</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCawqNEwUjaPuRUQabYiztgA" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="bi bi-youtube"></i> Kang Nong Banten</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 ">

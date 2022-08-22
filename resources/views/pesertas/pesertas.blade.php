@@ -4,10 +4,20 @@
 <div class="container mt-4">
     <div class="row mb-4">
         <div class="col-md-6 m-auto">
-            <form class="d-flex">
+            <form class="d-flex" action="/pesertas">
+                @if(request('kategori'))
+                    <input type="hidden" name="kategori" value="{{ request('kategori') }}">
+                @endif
+                @if(request('wilayah'))
+                    <input type="hidden" name="wilayah" value="{{ request('wilayah') }}">
+                @endif
+                @if(request('author'))
+                    <input type="hidden" name="author" value="{{ request('author') }}">
+                @endif
                 <input class="form-control me-2 shadow-sm" type="search" placeholder="Search" name="search" value="{{ request('search') }}">
                 <button class="btn btn-outline-success shadow-sm" type="submit">Search</button>
             </form>
+            
         </div>
     </div>
     <div class="row gx-5 gy-3">

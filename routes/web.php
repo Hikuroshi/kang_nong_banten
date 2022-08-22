@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\DashboardPesertaController;
+use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,11 +25,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('/dashboard/pesertas', DashboardPesertaController::class)->middleware('auth')->except('show');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+Route::controller(PageController::class)->group(function(){
+    Route::get('/', 'home');
+    Route::get('/about', 'about');
+});
 
 Route::controller(PesertaController::class)->group(function(){
-    Route::get('/', 'home');
     Route::get('/pesertas', 'index');
-    Route::get('/about', 'about');
+});
+
+Route::controller(PostController::class)->group(function(){
+    Route::get('/posts', 'index');
 });
 
 Route::controller(LoginController::class)->group(function(){

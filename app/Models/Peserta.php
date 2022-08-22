@@ -21,6 +21,24 @@ class Peserta extends Model
                     ->orWhere('angkatan', 'like', '%' . $search . '%');
             });
         });
+
+        $query->when($filters['wilayah'] ?? false, fn($query, $wilayah) =>
+            $query->whereHas('wilayah', fn($query) =>
+                $query->where('slug', $wilayah)
+            )
+        );
+
+        $query->when($filters['kategori'] ?? false, fn($query, $kategori) =>
+            $query->whereHas('kategori', fn($query) =>
+                $query->where('slug', $kategori)
+            )
+        );
+
+        $query->when($filters['author'] ?? false, fn($query, $author) =>
+            $query->whereHas('author', fn($query) =>
+                $query->where('username', $author)
+            )
+        );
     }
 
     public function author()

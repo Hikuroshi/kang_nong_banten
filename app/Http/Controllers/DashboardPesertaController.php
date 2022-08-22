@@ -24,7 +24,7 @@ class DashboardPesertaController extends Controller
             $admin = Peserta::where('user_id', auth()->user()->id)->get();
         }
 
-        return view('dashboard.index', [
+        return view('dashboard.pesertas.index', [
             'title' => 'Para Peserta Kang Nong Banten',
             'pesertas' => $admin
         ]);
@@ -37,7 +37,7 @@ class DashboardPesertaController extends Controller
      */
     public function create()
     {
-        return view('dashboard.create', [
+        return view('dashboard.pesertas.create', [
             'title' => 'Tambah Peserta Kang Nong Banten',
             'wilayahs' => Wilayah::all(),
             'kategoris' => Kategori::all()
@@ -97,7 +97,7 @@ class DashboardPesertaController extends Controller
             abort(403);
         }
 
-        return view('dashboard.edit', [
+        return view('dashboard.pesertas.edit', [
             'title' => 'Edit Peserta Kang Nong Banten',
             'peserta' => $peserta,
             'wilayahs' => Wilayah::all(),

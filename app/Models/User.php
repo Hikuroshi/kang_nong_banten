@@ -25,9 +25,13 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
     
-    public function peserta()
+    public function pesertas()
     {
         return $this->hasMany(Peserta::class);
+    }
+
+    public function posts(){
+        return $this->hasMany(Post::class);
     }
 
     /**
