@@ -16,9 +16,15 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->username == 'admin_knb'){
+            $admin = Post::all();
+        } else {
+            $admin = Post::where('user_id', auth()->user()->id)->get();
+        }
+
         return view('dashboard.posts.index', [
             'title' => 'Dokumentasi',
-            'posts' => Post::where('user_id', auth()->user()->id)->get()
+            'posts' => $admin
         ]);
     }
 
@@ -44,18 +50,20 @@ class DashboardPostController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
-            'image' => 'image|file|max:1024',
-            'body' => 'required'
+            'body' => 'required',
+            'foto' => 'required|image|file|max:512'
         ]);
 
-        if($request->file('image')){
-            $validatedData['image'] = $request->file('image')->store('post-images');
-        }
-
+        $validatedData['judul'] = ucwords($request->judul);
+        $validatedData['foto'] = $request->file('foto')->store('foto-post');
         $validatedData['user_id'] = auth()->user()->id;
 
+        $slug = Post::where('judul', $request->judul)->get();
+        $slugCount = count($slug) . "-" . Str::random(40);
+        $validatedData['slug'] = Str::of($request->nama_peserta . "-" . $slugCount)->slug('-');
+
         Post::create($validatedData);
-        return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+        return redirect('/dashboard/posts')->with('success', 'Postingan berhasil ditambahkan!');
     }
 
     /**
@@ -66,10 +74,10 @@ class DashboardPostController extends Controller
      */
     public function show(Post $post)
     {
-        if($post->author->id !== auth()->user()->id) {
+        if (auth()->user()->username !== 'admin_knb' && $post->author->id !== auth()->user()->id){
             abort(403);
         }
-        
+
         return view('dashboard.posts.show', [
             'post' => $post 
         ]);
@@ -83,7 +91,7 @@ class DashboardPostController extends Controller
      */
     public function edit(Post $post)
     {
-        if($post->author->id !== auth()->user()->id) {
+        if (auth()->user()->username !== 'admin_knb' && $post->author->id !== auth()->user()->id){
             abort(403);
         }
 
@@ -101,31 +109,32 @@ class DashboardPostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $rules = [
-            'judul' => 'required|max:255',
-            'image' => 'image|file|max:1024',
-            'body' => 'required'
-        ];
-
-        if($request->slug != $post->slug){
-            $rules['slug'] = 'required|unique:posts';
-        }
-
-        $validatedData = $request->validate($rules);
-
-        if($request->file('image')){
+        $validatedData = $request->validate([
+            'judul' => 'required|max:100',
+            'body' => 'required',
+            'image' => 'image|file|max:512'
+        ]);
+        
+        if($request->file('foto')){
             if($request->oldImage){
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['foto'] = $request->file('foto')->store('foto-post');
         }
-
+        
+        $validatedData['judul'] = ucwords($request->judul);
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
-
+        
+        $slug = Post::where('judul', $request->judul)->get();
+        $slugCount = count($slug) . "-" . Str::random(40);
+        
+        if($request->judul == $post->judul){
+            $validatedData['slug'] = $post->slug;
+        } else {
+            $validatedData['slug'] = Str::of($request->judul . "-" . $slugCount)->slug('-');
+        }
         Post::where('id', $post->id)->update($validatedData);
-
-        return redirect('/dashboard/posts')->with('success', 'Post has been Updated!');
+        return redirect('/dashboard/posts')->with('success', 'Postingan berhasil diperbarui!');
     }
 
     /**
@@ -136,10 +145,10 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        if($post->image){
-            Storage::delete($post->image);
+        if($post->foto){
+            Storage::delete($post->foto);
         }
         Post::destroy($post->id);
-        return redirect('/dashboard/posts')->with('success', 'Post has been deleted!');
+        return redirect('/dashboard/posts')->with('success', 'Postingan berhasil dihapus!');
     }
 }

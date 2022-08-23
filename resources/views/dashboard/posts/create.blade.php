@@ -9,47 +9,26 @@
         <form method="post" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
-                @error('title')
+                <label for="judul" class="form-label">Judul Postingan</label>
+                <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" required autofocus value="{{ old('judul') }}">
+                @error('judul')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="slug" class="form-label">Slug</label>
-                <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
-                @error('slug')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="category" class="form-label">Category</label>
-                <select class="form-select" name="category_id">
-                    @foreach($categories as $category)
-                        @if(old('category_id') == $category->id)
-                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                        @else
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endif
-                    @endforeach
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="image" class="form-label">Post Image</label>
+                <label for="foto" class="form-label">Gambar</label>
                 <img class="img-preview img-fluid mb-3 col-sm-5">
-                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
-                @error('image')
+                <input class="form-control @error('foto') is-invalid @enderror" type="file" id="foto" name="foto" required onchange="previewImage()">
+                @error('foto')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="body" class="form-label">Body</label>
+                <label for="body" class="form-label">Deskripsi</label>
                 @error('body')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
@@ -57,20 +36,11 @@
                 <trix-editor input="body"></trix-editor>
             </div>
             
-            <button type="submit" class="btn btn-primary">Create Post</button>
+            <button type="submit" class="btn btn-primary">Tambah Postingan</button>
         </form>
     </div>
 
     <script>
-        const title = document.querySelector('#title');
-        const slug = document.querySelector('#slug');
-
-        title.addEventListener('change', function(){
-            fetch('/dashboard/posts/checkSlug?title=' + title.value)
-            .then(response => response.json())
-            .then(data => slug.value = data.slug)
-        });
-
         document.addEventListener('trix-file-accept', function(e){
             e.preventDefault();
         })

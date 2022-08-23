@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('judul');
             $table->string('slug')->unique();
-            $table->string('image');
             $table->text('body');
+            $table->string('image');
             $table->timestamps();
         });
     }
