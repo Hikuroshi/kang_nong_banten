@@ -79,7 +79,8 @@ class DashboardPostController extends Controller
         }
 
         return view('dashboard.posts.show', [
-            'post' => $post 
+            'title' => $post->judul,
+            'post' => $post
         ]);
     }
 
@@ -96,6 +97,7 @@ class DashboardPostController extends Controller
         }
 
         return view('dashboard.posts.edit', [
+            'title' => 'Edit' . $post->judul,
             'post' => $post,
         ]);
     }
@@ -112,7 +114,7 @@ class DashboardPostController extends Controller
         $validatedData = $request->validate([
             'judul' => 'required|max:100',
             'body' => 'required',
-            'image' => 'image|file|max:512'
+            'foto' => 'image|file|max:512'
         ]);
         
         if($request->file('foto')){

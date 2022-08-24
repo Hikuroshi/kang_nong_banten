@@ -9,16 +9,19 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/all.min.css">
-    <!-- DataTables -->
     <link rel="stylesheet" href="/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="/css/buttons.bootstrap4.min.css">
-    <!-- Theme style -->
     <link rel="stylesheet" href="/css/adminlte.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            display: none;
+        }
+    </style>
 </head>
 <body style="font-family: Nunito, sans-serif">
     <nav class="navbar navbar-expand-lg bg-light mb-4 border">
@@ -44,8 +47,14 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" href="/about">Tentang</a>
                     </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="/dashboard/pesertas">Dashboard</a>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dashboard
+                        </a>
+                        <ul class="dropdown-menu mb-3">
+                            <li><a class="dropdown-item" href="/dashboard/pesertas">Dashboard Peserta</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/posts">Dashboard Postingan</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item px-2">
                         <form action="/logout" method="post">
@@ -93,17 +102,14 @@
         <div class="bg-gold-2">
             <div class="container text-center p-3">
                 © 2022 Copyright:
-                <a class="text-dark text-decoration-none" href="#">Kang Nong Banten</a>
+                <a class="text-white text-decoration-none" href="#">Kang Nong Banten</a>
             </div>    
         </div>
     </footer>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
     <script src="/js/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
     <script src="/js/bootstrap.bundle.min.dt.js"></script>
-    <!-- DataTables  & Plugins -->
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap4.min.js"></script>
     <script src="/js/dataTables.responsive.min.js"></script>
@@ -116,10 +122,9 @@
     <script src="/js/buttons.html5.min.js"></script>
     <script src="/js/buttons.print.min.js"></script>
     <script src="/js/buttons.colVis.min.js"></script>
-    <!-- AdminLTE App -->
     <script src="/js/adminlte.min.js"></script>
+    <script type="text/javascript" src="/js/trix.js"></script>
     
-    <!-- Page specific script -->
     <script>
         $(function () {
             $("#example1").DataTable({
@@ -136,6 +141,25 @@
                 "responsive": true,
             });
         });
+
+        document.addEventListener('trix-file-accept', function(e){
+            e.preventDefault();
+        })
+
+        
+        function previewImage() {
+            const foto = document.querySelector('#foto');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+            
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(foto.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
     </script>
 </body>
 </html>

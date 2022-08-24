@@ -37,8 +37,14 @@
                     </li>
                     
                     @auth
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="/dashboard/pesertas">Dashboard</a>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dashboard
+                        </a>
+                        <ul class="dropdown-menu mb-3">
+                            <li><a class="dropdown-item" href="/dashboard/pesertas">Dashboard Peserta</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/posts">Dashboard Postingan</a></li>
+                        </ul>
                     </li>
                     @endauth
 
