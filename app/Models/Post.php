@@ -16,7 +16,7 @@ class Post extends Model
         $query->when($filters['search'] ?? false, fn($query, $search) =>
             $query->where(fn($query) =>
                 $query->where('judul', 'like', '%' . $search . '%')
-                    ->orWhere('body', 'like', '%' . $search . '%')
+                    ->orWhere('deskripsi', 'like', '%' . $search . '%')
             )
         );
 

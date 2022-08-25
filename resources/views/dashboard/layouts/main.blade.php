@@ -54,6 +54,7 @@
                         <ul class="dropdown-menu mb-3">
                             <li><a class="dropdown-item" href="/dashboard/pesertas">Dashboard Peserta</a></li>
                             <li><a class="dropdown-item" href="/dashboard/posts">Dashboard Postingan</a></li>
+                            <li><a class="dropdown-item" href="/register">Tambah Admin</a></li>
                         </ul>
                     </li>
                     <li class="nav-item px-2">

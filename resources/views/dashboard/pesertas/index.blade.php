@@ -2,27 +2,28 @@
 
 @section('container')
 <div class="container">
-    <div class="text-center mb-4">
-        <h4 class="fw-bold">{{ auth()->user()->name }}</h4>
+    <div class="row">
+        <div class="col-md-4 lh-1">
+            <h2>Dokumentasi</h2>
+            <p class="text-muted">Halo, {{ auth()->user()->name }}</p>
+        </div>
+        <div class="col-md-6">
+            @if(session()->has('success'))
+                <div class="alert alert-success col-lg-8" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+        <div class="col-md-2 text-end">
+            <a href="/dashboard/pesertas/create" class="btn btn-primary mb-3 shadow-sm"><i class="bi bi-plus-circle"></i></a>
+        </div>
     </div>
+
     <section class="content">
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row justify-content-between">
-                            <div class="col-md-6">
-                                <a href="/dashboard/pesertas/create" class="btn btn-primary mb-3 shadow-sm">Tambah Peserta</a>
-                                <a href="/register" class="btn btn-warning mb-3 shadow-sm">Tambah Admin</a>
-                            </div>
-                            <div class="col-md-6">
-                                @if (session()->has('success'))
-                                <div class="alert alert-success col-lg-8 ms-auto">
-                                    {{ session('success') }}
-                                </div>
-                                @endif
-                            </div>
-                        </div>
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>

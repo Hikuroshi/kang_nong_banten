@@ -50,13 +50,13 @@ class DashboardPostController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
-            'body' => 'required',
+            'deskripsi' => 'required',
             'foto' => 'required|image|file|max:512'
         ]);
 
+        $validatedData['user_id'] = auth()->user()->id;
         $validatedData['judul'] = ucwords($request->judul);
         $validatedData['foto'] = $request->file('foto')->store('foto-post');
-        $validatedData['user_id'] = auth()->user()->id;
 
         $slug = Post::where('judul', $request->judul)->get();
         $slugCount = count($slug) . "-" . Str::random(40);
@@ -113,7 +113,7 @@ class DashboardPostController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required|max:100',
-            'body' => 'required',
+            'deskripsi' => 'required',
             'foto' => 'image|file|max:512'
         ]);
         

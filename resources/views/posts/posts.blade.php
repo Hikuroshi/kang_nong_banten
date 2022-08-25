@@ -30,11 +30,9 @@
                             Oleh <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a>. {{ $posts[0]->created_at->diffForHumans() }}
                         </small> 
                     </p>
-                    <article class="card-text mb-3">{!! Str::limit($posts[0]->body, 200) !!}</article>
+                    <p class="card-text mb-3">{{ Str::words(strip_tags($posts[0]->deskripsi), 30) }}</p>
     
-                    <p>
-                        <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
-                    </p>
+                    <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
                 </div>
             </div>
             
@@ -50,10 +48,11 @@
                             <h5 class="card-title">{{ $post->judul }}</h5>
                             <p>
                                 <small class="text-muted">
-                                    By. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a>{{ $post->created_at->diffForHumans() }}
+                                    Oleh <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a>. {{ $post->created_at->diffForHumans() }}
                                 </small> 
                             </p>
-                            <p class="card-text">{!! Str::limit($posts[0]->body, 200) !!}</p>
+                            <p class="card-text mb-3">{{ Str::words(strip_tags($posts[0]->deskripsi), 15) }}</p>
+                            
                             <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read more</a>
                         </div>
                     </div>

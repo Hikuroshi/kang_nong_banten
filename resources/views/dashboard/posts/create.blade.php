@@ -29,12 +29,12 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="body" class="form-label">Deskripsi</label>
-                @error('body')
+                <label for="deskripsi" class="form-label">Deskripsi</label>
+                @error('deskripsi')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
-                <input id="body" type="hidden" name="body" value="{{ old('body') }}">
-                <trix-editor input="body"></trix-editor>
+                <input id="deskripsi" type="hidden" name="deskripsi" value="{{ old('deskripsi') }}">
+                <trix-editor input="deskripsi"></trix-editor>
             </div>
             
             <button type="submit" class="btn btn-primary">Tambah</button>
