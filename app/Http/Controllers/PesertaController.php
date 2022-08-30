@@ -30,7 +30,9 @@ class PesertaController extends Controller
         }
         return view('pesertas.pesertas', [
             'title' => 'Semua Peserta' . $title,
-            'pesertas' => Peserta::latest()->filter(request(['search', 'wilayah', 'author', 'kategori', 'angkatan']))->paginate(10)->withQueryString()
+            'pesertas' => Peserta::latest()->filter(request(['search', 'wilayah', 'author', 'kategori', 'angkatan']))->paginate(10)->withQueryString(),
+            'wilayahs' => Wilayah::all(),
+            'kategoris' => Kategori::all()
         ]);
     }
 }

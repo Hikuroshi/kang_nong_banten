@@ -13,7 +13,7 @@ class PostController extends Controller
 
         if (request('author')) {
             $author = User::firstWhere('username', request('author'));
-            $title = ' by ' . $author->name;
+            $title = ' Oleh ' . $author->name;
         }
 
         return view('posts.posts', [
@@ -23,7 +23,7 @@ class PostController extends Controller
     }
 
     public function show(Post $post){
-        return view('post', [
+        return view('posts.post', [
             "title" => $post->name,
             "post" => $post,
         ]);

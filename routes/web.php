@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('/dashboard/pesertas', DashboardPesertaController::class)->middleware('auth')->except('show');
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth')->except('show');
 
 Route::controller(PageController::class)->group(function(){
     Route::get('/', 'home');
@@ -38,6 +38,7 @@ Route::controller(PesertaController::class)->group(function(){
 
 Route::controller(PostController::class)->group(function(){
     Route::get('/posts', 'index');
+    Route::get('/posts/{post:slug}', 'show');
 });
 
 Route::controller(LoginController::class)->group(function(){

@@ -74,14 +74,7 @@ class DashboardPostController extends Controller
      */
     public function show(Post $post)
     {
-        if (auth()->user()->username !== 'admin_knb' && $post->author->id !== auth()->user()->id){
-            abort(403);
-        }
-
-        return view('dashboard.posts.show', [
-            'title' => $post->judul,
-            'post' => $post
-        ]);
+        #
     }
 
     /**

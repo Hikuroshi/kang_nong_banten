@@ -32,7 +32,7 @@
                     </p>
                     <p class="card-text mb-3">{{ Str::words(strip_tags($posts[0]->deskripsi), 30) }}</p>
     
-                    <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
+                    <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-outline-primary">Selengkapnya</a>
                 </div>
             </div>
             
@@ -53,7 +53,7 @@
                             </p>
                             <p class="card-text mb-3">{{ Str::words(strip_tags($posts[0]->deskripsi), 15) }}</p>
                             
-                            <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+                            <a href="/posts/{{ $post->slug }}" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
