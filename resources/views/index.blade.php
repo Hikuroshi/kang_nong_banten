@@ -47,6 +47,7 @@
         </div>
     </div>
     
+    @if ($pesertas->count())
     <div class="container py-5">
         <div class="text-center">
             <h1 class="my-4 fw-bold">Peserta Kang Nong Banten</h1>
@@ -84,49 +85,53 @@
                 </div>
             </div>
         </div>
-        
-        <div class="text-center pb-5">
-            <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2 shadow-sm">Lebih Lengkap</a>
-        </div>
-        
-        <div class="container pb-5">
-            <div class="row g-4 g-lg-5">
-                <div class="col-md-12 col-lg-6">
-                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
-                        <div class="card-body text-center text-md-start">
-                            <h4 class="card-title fw-bold">Hari Air Dunia XXIX TH 2021</h4>
-                            <p class="card-text">Hari Senin 22 Maret 2021. Nong Verani dan Nong Qorina bertugas dalam acara “Hari Air Dunia XXIX TH 2021” yang berlokasi di Bendungan Sindangheula Kec. Pabuaran, Kab. Serang, Banten.</p>
-                            <a href="https://www.instagram.com/p/COaDl_JlYb_/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
-                        </div>
+    </div>
+    
+    <div class="text-center">
+        <a href="/pesertas" class="btn btn-outline-primary rounded-pill px-3 py-2 shadow-sm">Lebih Lengkap</a>
+    </div>
+    @endif
+    
+    <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+            <div class="col-md-12 col-lg-6">
+                <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
+                    <div class="card-body text-center text-md-start">
+                        <h4 class="card-title fw-bold">Hari Air Dunia XXIX TH 2021</h4>
+                        <p class="card-text">Hari Senin 22 Maret 2021. Nong Verani dan Nong Qorina bertugas dalam acara “Hari Air Dunia XXIX TH 2021” yang berlokasi di Bendungan Sindangheula Kec. Pabuaran, Kab. Serang, Banten.</p>
+                        <a href="https://www.instagram.com/p/COaDl_JlYb_/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
                     </div>
                 </div>
-                
-                <div class="col-md-12 col-lg-6">
-                    <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
-                        <div class="card-body text-center text-md-start">
-                            <h4 class="card-title fw-bold">Penyematan Duta Anti Narkoba 2020</h4>
-                            <p class="card-text">Kamis, 5 desember 2020. Telah dilaksanakan penyematan Duta Anti Narkoba 2020 kepada Kang Emir, Kang Steven, Nong Qorina, dan Nong Andini oleh Brigadir Jendral Polisi bapak Hendri Marpaung.</p>
-                            <a href="https://www.instagram.com/p/CKnP8FgFdxO/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
-                        </div>
+            </div>
+            
+            <div class="col-md-12 col-lg-6">
+                <div class="card border-0 bg-gold text-white rounded-4 py-5 px-lg-4 px-md-0 shadow">
+                    <div class="card-body text-center text-md-start">
+                        <h4 class="card-title fw-bold">Penyematan Duta Anti Narkoba 2020</h4>
+                        <p class="card-text">Kamis, 5 desember 2020. Telah dilaksanakan penyematan Duta Anti Narkoba 2020 kepada Kang Emir, Kang Steven, Nong Qorina, dan Nong Andini oleh Brigadir Jendral Polisi bapak Hendri Marpaung.</p>
+                        <a href="https://www.instagram.com/p/CKnP8FgFdxO/?utm_source=ig_web_copy_link" class="btn btn-light px-4 rounded-pill fw-bold shadow-sm">Selengkapnya</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container pb-3" style="margin-top: 15%">
-            <div class="text-center">
-                <h1 class="my-4 fw-bold">Pemilihan Kang Nong Banten 2020</h1>
-            </div>
+    </div>
+    
+    <div class="container pb-3" style="margin-top: 15%">
+        <div class="text-center">
+            <h1 class="my-4 fw-bold">Pemilihan Kang Nong Banten 2020</h1>
         </div>
-        
+    </div>
+    
+    <div class="container">
         <div class="ratio ratio-16x9">
             <iframe src="https://www.youtube.com/embed/y-OGeucOl2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-        <div class="container py-5">
-            <div class="text-center">
-                <p class="text-muted">Sebenarnya tradisi kita menghadirkan seluruh finalis di Grand Final, karena semua memiliki kans yang sama. Namun karena kondisi Pandemi, maka kami hadirkan setengah/ 50% dari jumlah finalis yang 24 pasang. Karena agar pilihan dewan juri lebih banyak. Jika sempat muncul 10 pasang,  itu semata kami terbawa eforia Top Ten. Jadi kami memberikan kesempatan lebih banyak kepada para peserta untuk memperlihatkan potensinya.</p>
-            </div>
+    </div>
+    
+    <div class="container py-5">
+        <div class="text-center">
+            <p class="text-muted">Sebenarnya tradisi kita menghadirkan seluruh finalis di Grand Final, karena semua memiliki kans yang sama. Namun karena kondisi Pandemi, maka kami hadirkan setengah/ 50% dari jumlah finalis yang 24 pasang. Karena agar pilihan dewan juri lebih banyak. Jika sempat muncul 10 pasang,  itu semata kami terbawa eforia Top Ten. Jadi kami memberikan kesempatan lebih banyak kepada para peserta untuk memperlihatkan potensinya.</p>
         </div>
-    </main>
-    @endsection
+    </div>
+</main>
+@endsection
